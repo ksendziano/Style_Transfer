@@ -8,7 +8,7 @@ from .import Style_Transfer_Modul
 
 def show_main_page(request):
     form = ImageForm()
-    return render(request, 'Style_Transfer/Main_Page.html', {'form': form})
+    return render(request, 'Style_Transfer/Main_Page.html', {'form': form}) #'Style_Transfer/Main_Page.html'много раз дублируется - в константы.
 
 
 def transfer(request):
@@ -23,7 +23,7 @@ def transfer(request):
             return render(request, 'Style_Transfer/Main_Page.html', {'form': form})
     else:
         form = ImageForm()
-    return render(request, 'Style_Transfer/Main_Page.html', {'form': form})
+    return render(request, 'Style_Transfer/Main_Page.html', {'form': form})# возвращаешь одно и то же, можно сделать это 1 раз в конце функции.
 
 
 def download_img(request):
